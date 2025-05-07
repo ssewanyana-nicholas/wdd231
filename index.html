@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD 230 - Web Frontend Development course assignment portal by Nicholas Ssewanyana. Access assignments, resources, and project details for enhancing your web development skills.">
+    <meta name="Author" content="Nicholas Ssewanyana">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <title>Nicholas Ssewanyana - WDD 230 - Web Frontend Development</title>
+
+    <meta property="og:title" content="WDD 230: Web Frontend Development 1">
+    <meta property="og:type" content="Website">
+</head>
+
+<body>
+    <header>
+        <img src="images/nicholas-ssewanyana.png" alt="profile picture">
+        <span>Nicholas Ssewanyana</span>
+    </header>
+    <nav>
+        <button id="myButton">&#9776;</button>
+        <ul class="menuLinks">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="">Chamber</a></li>
+            <li><a href="">GitHub Profile</a></li>
+            <li><a href="">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <hr class="line">
+        <div class="parent">
+            <section class="card">
+                <h2>Course Work</h2>
+                <ul id="learningActivities">
+                    <li>Week 1</li>
+                    <li></li>
+                </ul>
+            </section>
+            <section class="card2">
+                <h2>Kampala, Uganda</h2>
+                <img src="images/uganda2.webp" alt="uganda market">
+                <p class="caption">Uganda Market</p>
+
+            </section>
+        </div>
+    </main>
+    <div class="container">
+        <h2>Web and Computer Programming Certificate</h2>
+        <div class="filters">
+            <button class="active">All</button>
+            <button>CSE</button>
+            <button>WDD</button>
+        </div>
+        <div class="courses">
+
+        </div>
+    </div>
+    <footer>
+        <p id="copyright"></p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+    <script type="module">
+        import { courses } from './scripts/courseArray.js';
+        import { init } from './scripts/updateAndDisplayCourses.js';
+
+        
+        init(courses);
+    </script>
+
+</body>
+
+</html>

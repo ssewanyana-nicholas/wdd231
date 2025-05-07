@@ -1,0 +1,57 @@
+@media screen and (min-width: 640px) {
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1 1 100%;
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .parent section {
+        box-shadow: 1px 1px 10px black;
+    }
+
+    nav a {
+        padding: 25px;
+        font-size: 20px;
+    }
+
+    header {
+        display: flex;
+        background-color: #1e1e61;
+
+    }
+
+    header img {
+        width: 13%;
+        height: auto;
+        padding: 8px;
+
+
+    }
+
+    header span {
+        font-size: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-left: 320px;
+    }
+
+    ul.menuLinks {
+        display: flex;
+
+    }
+
+    nav button {
+        display: none;
+    }
+
+}
