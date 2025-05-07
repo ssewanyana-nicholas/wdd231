@@ -206,13 +206,13 @@ section img {
 }
 
 .courses button.completed {
-    background-color: #4CAF50;
+    background-color: #0b1a0b;
     /* Green for completed courses */
     color: white;
 }
 
 .courses button.not-completed {
-    background-color: #f44336;
+    background-color: #550903;
     /* Red for not completed courses */
     color: white;
 }
@@ -220,7 +220,7 @@ section img {
 .courses button:hover {
     transform: scale(1.05);
     /* Slight zoom effect */
-    background-color: #333;
+    background-color: #111010;
     /* Neutral hover color */
     color: white;
 }
