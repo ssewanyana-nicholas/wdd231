@@ -17,11 +17,12 @@
 
     <meta property="og:title" content="WDD 230: Web Frontend Development 1">
     <meta property="og:type" content="Website">
+
 </head>
 
 <body>
     <header>
-        <img src="images/nicholas-ssewanyana.png" alt="Nicholas Ssewanyana" class="profile">
+        <img src="images/nicholas_ssewanyana.webp" alt="picture of Nicholas" class="profile">
         <span>Nicholas Ssewanyana</span>
     </header>
     <nav>
@@ -52,7 +53,7 @@
             </section>
         </div>
     </main>
-    <div class="container">
+    <section class="container">
         <h2>Web and Computer Programming Certificate</h2>
         <div class="filters">
             <button class="active">All</button>
@@ -60,14 +61,14 @@
             <button>WDD</button>
         </div>
         <div class="courses"></div>
-        <p id="totalCredits">Total Credits: 0</p> 
-    </div>
+        <p id="totalCredits">Total Credits: 0</p>
+    </section>
     <footer>
         <p id="copyright"></p>
         <p id="lastModified"></p>
     </footer>
 
-    <script src="scripts/getDates.js"></script>
+    <script src="scripts/getdates.js"></script>
     <script type="module">
         import { courses } from './scripts/courseArray.js';
         import { init } from './scripts/updateAndDisplayCourses.js';
