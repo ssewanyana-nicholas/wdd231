@@ -1,0 +1,84 @@
+
+[
+    {
+        "businessname": "Kampala Web Solutions",
+        "address": "Plot 123 Kampala Road, Kampala, Uganda",
+        "phone": "+256 701 234567",
+        "website": "https://kampalawebsolutions.ug/",
+        "imageurl": "https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_960_720.jpg",
+        "membershiplevel": "Gold Membership",
+        "otherinformation": "Specializes in web development and digital marketing."
+    },
+    {
+        "businessname": "Design Hub Kampala",
+        "address": "7th Street Industrial Area, Kampala, Uganda",
+        "phone": "+256 772 345678",
+        "website": "https://designhubkampala.com/",
+        "imageurl": "https://cdn.pixabay.com/photo/2016/11/29/05/01/lights-1867437_1280.jpg",
+        "membershiplevel": "Silver Membership",
+        "otherinformation": "Provides co-working spaces and design services."
+    },
+    {
+        "businessname": "Graphic Studio Uganda",
+        "address": "Plot 456 Ntinda Road, Kampala, Uganda",
+        "phone": "+256 783 456789",
+        "website": "https://graphicstudio.ug/",
+        "imageurl": "https://cdn.pixabay.com/photo/2013/09/05/14/58/colored-pencils-179170_640.jpg",
+        "membershiplevel": "Bronze Membership",
+        "otherinformation": "Offers graphic design and branding services."
+    },
+    {
+        "businessname": "Media House Kampala",
+        "address": "Plot 789 Bukoto Street, Kampala, Uganda",
+        "phone": "+256 794 567890",
+        "website": "https://mediahousekampala.ug/",
+        "imageurl": "https://cdn.pixabay.com/photo/2015/10/21/08/22/media-998990_640.jpg",
+        "membershiplevel": "Gold Membership",
+        "otherinformation": "Specializes in multimedia production and advertising."
+    },
+    {
+        "businessname": "Tech Services Uganda",
+        "address": "Plot 321 Muyenga, Kampala, Uganda",
+        "phone": "+256 705 678901",
+        "website": "https://techservices.ug/",
+        "imageurl": "https://cdn.pixabay.com/photo/2020/08/22/11/40/technician-5508210_640.jpg",
+        "membershiplevel": "Silver Membership",
+        "otherinformation": "Provides IT support and consultancy services."
+    },
+    {
+        "businessname": "Express Car Wash Kampala",
+        "address": "Plot 654 Kira Road, Kampala, Uganda",
+        "phone": "+256 776 789012",
+        "website": "https://expresscarwashkampala.ug/",
+        "imageurl": "https://cdn.pixabay.com/photo/2020/11/24/10/23/car-wash-5772094_640.jpg",
+        "membershiplevel": "Bronze Membership",
+        "otherinformation": "Offers professional car washing and detailing services."
+    },
+    {
+        "businessname": "Kampala IT Solutions",
+        "address": "Plot 987 Nakawa, Kampala, Uganda",
+        "phone": "+256 712 345678",
+        "website": "https://kampalaitsolutions.ug/",
+        "imageurl": "https://cdn.pixabay.com/photo/2015/07/25/16/51/solution-860229_640.jpg",
+        "membershiplevel": "Gold Membership",
+        "otherinformation": "Specializes in IT solutions and software development."
+    },
+    {
+        "businessname": "Digital Creatives Kampala",
+        "address": "Plot 654 Kololo, Kampala, Uganda",
+        "phone": "+256 723 456789",
+        "website": "https://digitalcreatives.ug/",
+        "imageurl": "https://cdn.pixabay.com/photo/2021/06/22/16/04/beauty-6356536_640.jpg",
+        "membershiplevel": "Silver Membership",
+        "otherinformation": "Provides digital marketing and creative services."
+    },
+    {
+        "businessname": "Kampala Printing Services",
+        "address": "Plot 321 Bugolobi, Kampala, Uganda",
+        "phone": "+256 734 567890",
+        "website": "https://kampalaprinting.ug/",
+        "imageurl": "https://cdn.pixabay.com/photo/2016/08/18/13/03/ink-1602896_1280.jpg",
+        "membershiplevel": "Bronze Membership",
+        "otherinformation": "Offers professional printing and publishing services."
+    }
+]

@@ -15,14 +15,15 @@ h1 {
 
 header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 44px auto 44px;
+    align-items: end;
     background-color: #1e1e61;
     position: relative;
 }
 
 header img {
     grid-column: 1/2;
-    width: 50%;
+    width: 150%;
     height: auto;
     padding: 8px;
     margin: 0;
@@ -33,9 +34,9 @@ header img {
 
 header span {
     grid-column: 2/4;
-    font-size: 28px;
+    font-size: 20px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     color: white;
 }
@@ -44,25 +45,57 @@ ul {
     list-style-type: none;
 }
 
+/* --- NAVIGATION STYLES --- */
+
+/* Desktop: Always show nav horizontally */
 nav {
-    background-color: black;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-nav a {
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 0.5rem;
+}
+
+nav ul li a {
     display: block;
     text-align: center;
     text-decoration: none;
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
+    border-radius: 0.25rem;
+    background-color: #1e1e61;
+    transition: background-color 0.3s;
 }
 
-nav a:hover {
-    background-color: rgba(225, 225, 225, 0.2);
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #4CAF50;
     color: white;
 }
 
-nav a.active {
-    background-color: #381f1f;
+/* Hamburger button hidden on desktop */
+#myButton {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: .25rem 2vw;
 }
 
 main h1 {
@@ -243,4 +276,32 @@ section img {
     padding: 0.5rem;
     border-radius: 0.25rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#myButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: .25rem 2vw;
+}
+
+ul.menuLinks li a {
+    display: block;
+    padding: 0.75rem 2vw;
+}
+
+ul.menuLinks {
+    list-style-type: none;
+}
+
+#myButton.open::before {
+    content: "x";
+}
+
+#myButton::before {
+    content: "\2630";
 }

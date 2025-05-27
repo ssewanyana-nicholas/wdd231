@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover the benefits of joining the Kampala Chamber of Commerce. Gain access to exclusive networking events, business resources, and advocacy efforts. Apply for membership today to boost your business visibility and connect with local leaders">
+    <meta name="Author" content="Nicholas Ssewanyana">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,400;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link type="text/css" rel="stylesheet" href="styles/base.css">
+    <link type="text/css" rel="stylesheet" href="styles/larger.css">
+    <title>Kampala Chamber of Commerce</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Kampala Chamber of Commerce - Empowering Business, Driving Prosperity">
+    <meta property="og:type" content="Website">
+    <meta property="og:image" content="https://ssewanyana-nicholas.github.io/wdd230/week01/images/kampala.PNG">
+    <meta property="og:url" content="https://ssewanyana-nicholas.github.io/wdd230/chamber/index.html">
+</head>
+
+<body>
+    <header>
+        <img src="images/kampala-logo.png" alt="kampala logo" class="kampala-logo">
+        <button id="myButton"></button>
+        <img src="images/dark-theme.svg" alt="dark mode" id="darkButton" class="dark-theme">
+    </header>
+    <nav id="animateme">
+        <ul class="menuLinks">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li class="current-menu-item"><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero">
+            <div class="hero-img-container">
+                
+                <img class="hero-img" src="images/city-view.jpg" alt="scalable, responsive hero image">
+                <button class="hero-btn">Keynote Tickets</button>
+            </div>
+        </section>
+        <h1>Home</h1>
+        <div class="info-row">
+            <section class="info-card events">
+                <h2>Events</h2>
+                <ul>
+                    <li>Monthly Networking Breakfast</li>
+                    <li>Business After Hours Mixer</li>
+                    <li>Industry-Specific Roundtable Discussions</li>
+                    <li>Small Business Luncheon</li>
+                </ul>
+            </section>
+            <section class="info-card weather">
+                <h2>Current Weather</h2>
+                <div class="weather-main">
+                    <span id="current-temp"></span>
+                    <img id="weather-icon" class="weather-icon" src="" alt="">
+                    <figcaption id="weather-description"></figcaption>
+                </div>
+                <div class="weather-details">
+                    <div>Number of visits: <span class="visits"></span></div>
+                </div>
+            </section>
+            <section class="info-card forecast">
+                <h2>Weather Forecast</h2>
+                <ul id="forecast-list"></ul>
+            </section>
+        </div>
+        <div class="directory-controls">
+            <button id="grid">Grid View</button>
+            <button id="list">List View</button>
+        </div>
+        <article class="membersGrid grid"></article>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <strong>Kampala Chamber of Commerce</strong><br>
+                10 Rue De La Paix<br>
+                Kampala, Uganda<br>
+                info@kampalachamber.org<br>
+                (256) 555-2300
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube" width="10"></a>
+                <a href="#" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter" width="10"></a>
+                <a href="#" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn" width="10"></a>
+            </div>
+            <div class="footer-dev">
+                <span>Nicholas Ssewanyana | WDD231 Class Project</span><br>
+                <span id="copyright"></span><br>
+                <span id="lastModified"></span>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/scriptsHome.js"></script>
+    <script src="scripts/members.js"></script>
+</body>
+
+</html>
