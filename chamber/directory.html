@@ -12,17 +12,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,400;1,300&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/normalise.css">
     <link type="text/css" rel="stylesheet" href="styles/base.css">
-    <link type="text/css" rel="stylesheet" href="styles/larger.css">
+    <link type="text/css" rel="stylesheet" href="styles/large.css">
     <title>Kampala Chamber of Commerce</title>
 
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <meta property="og:title" content="Kampala Chamber of Commerce - Empowering Business, Driving Prosperity">
     <meta property="og:type" content="Website">
-    <meta property="og:image" content="https://ssewanyana-nicholas.github.io/wdd230/week01/images/kampala.PNG">
-    <meta property="og:url" content="https://ssewanyana-nicholas.github.io/wdd230/chamber/index.html">
+    <meta property="og:image" content="images/kampala-logo.png">
+    <meta property="og:url" content="https://ssewanyana-nicholas.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description"
+        content="Join the Kampala Chamber of Commerce to access exclusive networking, business resources, and advocacy. Boost your business visibility and connect with local leaders.">
 </head>
 
 <body>
@@ -41,8 +43,9 @@
     </nav>
     <main>
         <section class="hero">
+            <h2>Kampala Chamber of Commerce</h2>
             <div class="hero-img-container">
-                
+
                 <img class="hero-img" src="images/city-view.jpg" alt="scalable, responsive hero image">
                 <button class="hero-btn">Keynote Tickets</button>
             </div>
@@ -62,8 +65,11 @@
                 <h2>Current Weather</h2>
                 <div class="weather-main">
                     <span id="current-temp"></span>
-                    <img id="weather-icon" class="weather-icon" src="" alt="">
-                    <figcaption id="weather-description"></figcaption>
+                    <figure style="display:inline;">
+                        <img id="weather-icon" class="weather-icon" src="images/weather-placeholder.svg"
+                            alt="Weather icon">
+                        <figcaption id="weather-description"></figcaption>
+                    </figure>
                 </div>
                 <div class="weather-details">
                     <div>Number of visits: <span class="visits"></span></div>
@@ -78,13 +84,17 @@
             <button id="grid">Grid View</button>
             <button id="list">List View</button>
         </div>
-        <article class="membersGrid grid"></article>
+        <article class="membersGrid grid">
+            <h2 class="visually-hidden">Business Members Directory</h2>
+            <!-- Member cards will be injected here -->
+        </article>
+        <h2>Business Information</h2>
     </main>
     <footer>
         <div class="footer-content">
             <div class="footer-contact">
                 <strong>Kampala Chamber of Commerce</strong><br>
-                10 Rue De La Paix<br>
+                10 Kimahi Avenue<br>
                 Kampala, Uganda<br>
                 info@kampalachamber.org<br>
                 (256) 555-2300

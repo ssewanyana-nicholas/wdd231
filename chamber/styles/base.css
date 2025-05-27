@@ -1,5 +1,3 @@
-/* --- Professional Chamber Base Styles --- */
-
 *,
 *::before,
 *::after {
@@ -586,6 +584,16 @@ body.dark-mode footer {
 .footer-dev span {
     display: block;
     margin-bottom: 0.2em;
+}
+
+/* Visually Hidden Class */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
 }
 
 /* Responsive */
