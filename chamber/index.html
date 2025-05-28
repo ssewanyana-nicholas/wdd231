@@ -32,9 +32,9 @@
         <nav id="animateme">
             <img src="images/kampala-logo.png" alt="kampala logo" class="kampala-logo">
             <ul class="menuLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a class="active" href="directory.html">Business directory</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li class="current-menu-item"><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Business directory</a></li>
                 <li><a href="join.html">Join</a></li>
             </ul>
             <img src="images/dark-theme.svg" alt="dark mode" id="darkButton" class="dark-theme">
@@ -42,17 +42,70 @@
         </nav>
     </header>
     <main>
-        <h1>Business Directory</h1>
-        <div class="directory-controls">
-            <button id="grid">Grid View</button>
-            <button id="list">List View</button>
+        <section class="hero">
+            <h2 class="hero-title">Kampala Chamber of Commerce</h2>
+            <img class="hero-img" src="images/city-view.jpg" alt="scalable, responsive hero image">
+            <button class="hero-btn">Keynote Tickets</button>
+        </section>
+        <h1>Home</h1>
+        <div class="info-row">
+            <section class="info-card events enhanced-events-card">
+                <div class="events-header">
+                    <img src="images/calendar-event.svg" alt="Events Icon" class="events-icon">
+                    <h2>Upcoming Events</h2>
+                </div>
+                <ul class="events-list">
+                    <li>
+                        <span class="event-dot"></span>
+                        Monthly Networking Breakfast
+                    </li>
+                    <li>
+                        <span class="event-dot"></span>
+                        Business After Hours Mixer
+                    </li>
+                    <li>
+                        <span class="event-dot"></span>
+                        Industry-Specific Roundtable Discussions
+                    </li>
+                    <li>
+                        <span class="event-dot"></span>
+                        Small Business Luncheon
+                    </li>
+                </ul>
+                <a href="events.html" class="events-link">See All Events &rarr;</a>
+            </section>
+            <section class="info-card weather">
+                <h2>Current Weather</h2>
+                <div class="weather-main">
+                    <span id="current-temp"></span>
+                    <figure style="display:inline;">
+                        <img id="weather-icon" class="weather-icon" src="images/weather-placeholder.svg"
+                            alt="Weather icon">
+                        <figcaption id="weather-description"></figcaption>
+                    </figure>
+                </div>
+                <div class="weather-details">
+                    <div>Number of visits: <span class="visits"></span></div>
+                </div>
+            </section>
+            <section class="info-card forecast">
+                <h2>Weather Forecast</h2>
+                <ul id="forecast-list"></ul>
+            </section>
         </div>
-        <article class="membersGrid grid">
-            <h2 class="visually-hidden">Business Members Directory</h2>
-            <!-- Member cards will be injected here -->
-        </article>
+        <div class="sportlight">
+            <h2>Spotlight Members</h2>
+            <div class="directory-controls">
+                <button id="grid">Grid View</button>
+                <button id="list">List View</button>
+            </div>
+            <article class="membersGrid grid">
+                <h2 class="visually-hidden">Business Members Directory</h2>
+                <!-- Member cards will be injected here -->
+            </article>
+        </div>
+        <h2>Business Information</h2>
     </main>
-
     <footer>
         <div class="footer-content">
             <div class="footer-contact">

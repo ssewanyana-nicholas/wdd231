@@ -156,6 +156,7 @@
 
 
 }
+
 @media (max-width: 900px) {
     .info-row {
         flex-direction: column;

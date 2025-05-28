@@ -263,3 +263,41 @@ const darkButton = document.getElementById('darkButton');
 darkButton.addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
 });
+
+// ...existing code...
+
+// Example: Filter for spotlight members (e.g., gold/silver tier, or a 'spotlight' property)
+function getSpotlightMembers(members, count = 3) {
+    // Example: spotlight members are those with a 'spotlight' property true or a certain membership level
+    const spotlight = members.filter(m => m.spotlight || m.membership === 'Gold' || m.membership === 'Silver');
+    // Shuffle and pick three
+    for (let i = spotlight.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [spotlight[i], spotlight[j]] = [spotlight[j], spotlight[i]];
+    }
+    return spotlight.slice(0, count);
+}
+
+function displaySpotlightMembers(members) {
+    const spotlightMembers = getSpotlightMembers(members, 3);
+    const container = document.getElementById('spotlight-cards');
+    container.innerHTML = '';
+    spotlightMembers.forEach(member => {
+        const card = document.createElement('div');
+        card.className = 'spotlight-card';
+        card.innerHTML = `
+            <img src="${member.image || 'images/default-member.png'}" alt="${member.name}">
+            <h3>${member.name}</h3>
+            <p>${member.tagline || ''}</p>
+            <p>${member.address || ''}</p>
+            <a href="${member.website || '#'}" target="_blank">Visit Website</a>
+        `;
+        container.appendChild(card);
+    });
+}
+
+// After fetching/loading your members data, call:
+if (typeof members !== "undefined") {
+    displaySpotlightMembers(members);
+}
+
