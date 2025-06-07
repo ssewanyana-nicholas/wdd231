@@ -570,6 +570,10 @@ body.dark-mode .list section:hover {
     color: #444;
 }
 
+figure {
+    display: inline;
+}
+
 
 footer {
     background: linear-gradient(90deg, #1e1e61 60%, #c5131c 100%);
