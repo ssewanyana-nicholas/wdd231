@@ -4,7 +4,7 @@
     box-sizing: inherit;
 }
 
-/* Enhanced Events Card Styles */
+
 .enhanced-events-card {
     background: linear-gradient(135deg, #fff7f0 60%, #ffe3e3 100%);
     border: 2px solid #c5131c33;
@@ -100,7 +100,6 @@ body.dark-mode {
     color: #f1f1f1;
 }
 
-/* Typography */
 h1,
 h2,
 h3 {
@@ -143,7 +142,7 @@ a:focus {
     text-decoration: underline;
 }
 
-/* Header & Navigation */
+
 header {
     background: #1e1e61;
     color: #fff;
@@ -188,7 +187,7 @@ body.dark-mode header {
     height: 32px;
 }
 
-/* Navigation */
+
 
 nav {
     width: 100vw;
@@ -249,7 +248,7 @@ body.dark-mode .menuLinks li a:hover {
     color: #fff;
 }
 
-/* Hero Section */
+
 
 .hero {
     position: relative;
@@ -313,7 +312,7 @@ body.dark-mode .hero-btn {
     transform: translateY(-2px) scale(1.04);
 }
 
-/* Info Row & Cards */
+
 .info-row {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -417,7 +416,7 @@ body.dark-mode .list section:hover {
     margin-bottom: 0.5em;
 }
 
-/* Directory Controls */
+
 .directory-controls {
     display: flex;
     justify-content: flex-end;
@@ -446,7 +445,7 @@ body.dark-mode .list section:hover {
     box-shadow: 0 2px 12px #c5131c33;
 }
 
-/* Directory Cards */
+
 .membersGrid {
     max-width: 1200px;
     margin: 0 auto 2rem auto;
@@ -514,7 +513,7 @@ body.dark-mode .list section:hover {
     text-decoration: underline;
 }
 
-/* List View */
+
 .list {
     display: flex;
     flex-direction: column;
@@ -571,7 +570,7 @@ body.dark-mode .list section:hover {
     color: #444;
 }
 
-/* Footer */
+
 footer {
     background: linear-gradient(90deg, #1e1e61 60%, #c5131c 100%);
     color: #fff;
@@ -633,7 +632,7 @@ body.dark-mode footer {
     margin-bottom: 0.2em;
 }
 
-/* Visually Hidden Class */
+
 .visually-hidden {
     position: absolute !important;
     height: 1px;
@@ -641,65 +640,4 @@ body.dark-mode footer {
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    #myButton {
-        display: inline-block;
-        position: absolute;
-        right: 1.5rem;
-        top: 1.2rem;
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 2rem;
-        cursor: pointer;
-        z-index: 101;
-    }
-
-    #myButton.open::before {
-        content: "✖";
-    }
-
-    #myButton::before {
-        content: "\2630";
-    }
-
-    .menuLinks {
-        display: none;
-        flex-direction: column;
-        background: #1e1e61;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 180px;
-        border-radius: 0 0 12px 12px;
-        box-shadow: 0 4px 16px #0003;
-        z-index: 100;
-        margin-top: 0;
-    }
-
-    .menuLinks.open {
-        display: flex;
-    }
-
-    .info-row {
-        display: block;
-    }
-
-    .hero-title {
-        font-size: 16px;
-        text-align: center;
-    }
-
-    nav {
-        position: relative;
-        width: 100%;
-        left: 0;
-        right: 0;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 0.5rem 1rem;
-    }
 }
