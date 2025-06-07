@@ -4,6 +4,12 @@
     box-sizing: inherit;
 }
 
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 
 .enhanced-events-card {
     background: linear-gradient(135deg, #fff7f0 60%, #ffe3e3 100%);
@@ -190,17 +196,18 @@ body.dark-mode header {
 
 
 nav {
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
     position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    left: 0;
+    right: 0%;
+    margin-left: 0;
+    margin-right: 0;
     padding: 0 2rem;
     background: rgba(30, 30, 97, 0.98);
+    position: relative;
+    padding: 0 1rem;
     align-items: center;
-    z-index: 1000;
 }
 
 
@@ -252,16 +259,15 @@ body.dark-mode .menuLinks li a:hover {
 
 .hero {
     position: relative;
-    width: 100vw;
-    max-width: 100vw;
-    left: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .hero-img {
-    width: 100vw;
+    width: 100%;
     height: 480px;
     object-fit: cover;
     display: block;
