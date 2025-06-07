@@ -641,3 +641,64 @@ body.dark-mode footer {
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
 }
+
+
+@media (max-width: 900px) {
+    #myButton {
+        display: inline-block;
+        position: absolute;
+        right: 1.5rem;
+        top: 1.2rem;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    #myButton.open::before {
+        content: "✖";
+    }
+
+    #myButton::before {
+        content: "\2630";
+    }
+
+    .menuLinks {
+        display: none;
+        flex-direction: column;
+        background: #1e1e61;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 180px;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 4px 16px #0003;
+        z-index: 100;
+        margin-top: 0;
+    }
+
+    .menuLinks.open {
+        display: flex;
+    }
+
+    .info-row {
+        display: block;
+    }
+
+    .hero-title {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    nav {
+        position: relative;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0.5rem 1rem;
+    }
+}
