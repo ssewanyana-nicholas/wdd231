@@ -716,6 +716,7 @@ body.dark-mode footer {
 .join {
     margin: 0 10% 0 10%;
     min-height: 20rem;
+    background-color: white;
 
 }
 
