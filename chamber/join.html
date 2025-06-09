@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover the benefits of joining the Kampala Chamber of Commerce. Gain access to exclusive networking events, business resources, and advocacy efforts. Apply for membership today to boost your business visibility and connect with local leaders">
+    <meta name="author" content="Nicholas Ssewanyana">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,400;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalise.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <title>Kampala Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Kampala Chamber of Commerce - Empowering Business, Driving Prosperity">
+    <meta property="og:type" content="Website">
+    <meta property="og:image" content="https://ssewanyana-nicholas.github.io/wdd231/chamber/images/kampala-logo.png">
+    <meta property="og:url" content="https://ssewanyana-nicholas.github.io/wdd231/chamber/index.html">
+    <meta property="og:description"
+        content="Join the Kampala Chamber of Commerce to access exclusive networking, business resources, and advocacy. Boost your business visibility and connect with local leaders.">
+</head>
+
+<body>
+    <header>
+        <nav id="animateme">
+            <img src="images/kampala-logo.png" alt="kampala logo" class="kampala-logo">
+            <ul class="menuLinks">
+                <li><a href="index.html">Home</a></li>
+                <li class="current-menu-item"><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Business directory</a></li>
+                <li><a class="active" href="join.html">Join</a></li>
+            </ul>
+            <img src="images/dark-theme.svg" alt="dark mode" id="darkButton" class="dark-theme">
+            <button id="myButton"></button>
+        </nav>
+    </header>
+    <main class="join">
+        <h2>Membership information</h2>
+        <form action="thankyou.html" method="post" class="wf1">
+
+            <fieldset>
+                <legend>Applicant Information</legend>
+                <label>First name*<input type="text" id="first-name" name="first-name" required></label>
+                <label>Last name*<input type="text" id="last-name" name="last-name" required></label>
+
+
+                <label>Title or Position*<input type="text" id="title" name="title" pattern="^[a-zA-Z\s-]{7,}$"
+                        title="Only alpha characters, hyphens, and spaces are allowed. Minimum 7 characters."
+                        required></label>
+                <label>Email address*<input type="email" id="email" name="email" placeholder="example@domain.com"
+                        required></label>
+                <label>mobile phone number*<input type="tel" id="phone" name="phone" required></label>
+                <label>Business/Organization's name<input type="text" id="business-name" name="business-name"
+                        required></label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Membership Level</legend>
+                <div>Membership level Needed</div>
+                <label><input type="radio" name="level" value="yes">NP Membership</label>
+                <label><input type="radio" name="level" value="yes">Bronze Membership</label>
+                <label><input type="radio" name="level" value="yes">Silver Membership</label>
+                <label><input type="radio" name="level" value="yes">Gold Membership</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Business description</legend>
+                <div>Tell us about your business</div>
+                <label>Business/Organization Description:<textarea id="description"
+                        name="description"></textarea></label>
+                <input type="hidden" id="timestamp" name="timestamp" value="<?php echo date('Y-m-d H:i:s'); ?>">
+            </fieldset>
+
+            <input type="submit" value="Send my info">
+        </form>
+        <div class="membership-benefits">
+            <h3>Membership Level Benefits</h3>
+            <p><strong>NP Membership:</strong> No fee, suitable for non-profit organizations.</p>
+            <p><strong>Bronze Membership:</strong> Basic benefits, including access to events.</p>
+            <p><strong>Silver Membership:</strong> Additional benefits such as training sessions and advertising.</p>
+            <p><strong>Gold Membership:</strong> Premium benefits, including spotlight positions on the home page, event
+                discounts, and more.</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <strong>Kampala Chamber of Commerce</strong><br>
+                10 Kimahi Avenue<br>
+                Kampala, Uganda<br>
+                info@kampalachamber.org<br>
+                (256) 555-2300
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube" width="10"></a>
+                <a href="#" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter" width="10"></a>
+                <a href="#" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn" width="10"></a>
+            </div>
+            <div class="footer-dev">
+                <span>Nicholas Ssewanyana | WDD231 Class Project</span><br>
+                <span id="copyright"></span><br>
+                <span id="lastModified"></span>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/scriptshome.js"></script>
+    <script src="scripts/members.js"></script>
+</body>
+
+</html>
