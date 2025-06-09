@@ -4,7 +4,8 @@
     box-sizing: inherit;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -716,7 +717,7 @@ body.dark-mode footer {
 .join {
     margin: 0 10% 0 10%;
     min-height: 20rem;
-    
+
 }
 
 .wf1 fieldset {
@@ -830,4 +831,62 @@ body.dark-mode footer {
     box-shadow: 0 2px 12px #c5131c33;
     font-family: 'Roboto Condensed', Arial, sans-serif;
     letter-spacing: 0.5px;
+}
+
+
+.allplaces div {
+    margin: 1rem 8px;
+    background-color: #eee;
+    border-radius: 8px;
+    border: 1px solid #999;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas: 
+    "name"
+    "photograph"
+    "description"
+    "address"
+    "cost";
+}
+
+.allplaces div h2 {
+    margin: 1rem 10px;
+    font-size: 1.2rem;
+    color: #c5131c;
+    text-align: center;
+    grid-area: name;
+}
+
+.allplaces div:hover {
+    box-shadow: 0 8px 32px #c5131c33;
+    transform: translateY(-4px) scale(1.02);
+}
+
+.allplaces div img {
+    width: 100%;
+    grid-area: photograph;
+   
+}
+
+.allplaces div p {
+    margin: 1rem 10px;
+    font-size: 1rem;
+    color: #1e1e61;
+    text-align: center;
+}
+
+.address {
+    margin: 1rem 10px;
+    grid-area: address;
+
+}
+
+.cost {
+    margin: 1rem 10px;
+    grid-area: cost;
+}
+.desc {
+    margin: 1rem 10px;
+    grid-area: description;
 }

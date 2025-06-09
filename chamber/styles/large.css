@@ -1,4 +1,4 @@
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 64rem) {
     nav {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -129,6 +129,11 @@
 
     .info {
         text-align: center;
+    }
+
+    .allplaces {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
