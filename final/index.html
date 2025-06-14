@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover Uganda Golf Club: premier golfing, events, and membership in Kampala." />
+  <meta name="author" content="Nicholas Ssewanyana" />
+  <title>Uganda Golf Club</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/normalise.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+
+  <!-- Social Meta Tags -->
+  <meta property="og:title" content="Uganda Golf Club - Kampala's Premier Golf Destination" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/kampala-logo.png" />
+  <meta property="og:url" content="https://ssewanyana-nicholas.github.io/wdd231/final/index.html" />
+  <meta property="og:description" content="Book tee times, join tournaments, and explore Uganda Golf Club." />
+</head>
+
+<body>
+  <!-- HERO SECTION -->
+  <div class="hero-bg-container">
+    <header class="site-header">
+      <div class="logo">
+        <img src="images/golflogo.png" alt="Uganda Golf Club Logo" />
+        <span>Uganda Golf Club</span>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="cta-button primary">Book a Tee Time</a>
+    </header>
+
+    <section class="hero-content">
+      <h1>Refine Your Swing in the Heart of Kampala</h1>
+      <p>Championship fairways, member benefits, and a tradition of excellence.</p>
+      <a href="#" class="cta-button secondary">Explore Membership</a>
+    </section>
+  </div>
+
+  <!-- Live Chat -->
+  <div class="chat-widget">
+    <a href="#">Live Club Chat</a>
+  </div>
+
+  <!-- FEATURED APPROACH SECTION -->
+  <section class="section-personal-approach">
+    <div class="approach-images">
+      <img src="images/player-action.jpeg" alt="Golf player in action" />
+      <img src="images/coach-session.jpeg" alt="Golf coaching session" />
+    </div>
+    <div class="approach-text">
+      <h2>PERSONAL APPROACH</h2>
+      <h3>Elevating Your Game at Uganda Golf Club</h3>
+      <p>
+        At the heart of Kampala, Uganda Golf Club offers more than a championship course — we deliver a tailored journey
+        for every golfer. Whether you’re mastering the fundamentals or honing your tournament skills, our team provides
+        the focus and care to help you grow.
+      </p>
+      <ul>
+        <li>Customized training programs for all skill levels</li>
+        <li>Professional one-on-one coaching and mentorship</li>
+        <li>Premier practice facilities and member access</li>
+      </ul>
+      <a href="#" class="cta-button secondary">Meet Our Coaches</a>
+    </div>
+  </section>
+
+  <!-- EVENTS AND WEATHER INFO -->
+  <div class="info-row">
+    <section class="info-card events enhanced-events-card">
+      <div class="events-header">
+        <img src="images/calendar-event.svg" alt="Golf Event Icon" class="events-icon">
+        <h2>Upcoming Club Events</h2>
+      </div>
+      <ul class="events-list">
+        <li>
+          <span class="event-dot"></span>
+          Sunday Stableford Challenge
+        </li>
+        <li>
+          <span class="event-dot"></span>
+          Members & Guests Invitational
+        </li>
+        <li>
+          <span class="event-dot"></span>
+          Junior Golf Development Camp
+        </li>
+        <li>
+          <span class="event-dot"></span>
+          Twilight Nine & Dine Evenings
+        </li>
+      </ul>
+      <a href="events.html" class="events-link">View Full Calendar &rarr;</a>
+    </section>
+    <section class="info-card weather">
+       <h2>Golf Weather Today</h2>
+      <div class="weather-main">
+        <span id="current-temp"></span>
+        <figure>
+          <img id="weather-icon" class="weather-icon" src="images/weather-placeholder.svg" alt="Weather icon">
+          <figcaption id="weather-description"></figcaption>
+        </figure>
+      </div>
+      <div class="weather-details">
+        <div>Number of visits: <span class="visits"></span></div>
+      </div>
+    </section>
+    <section class="info-card forecast">
+      <h2>Kampala Course Forecast</h2>
+      <ul id="forecast-list"></ul>
+    </section>
+  </div>
+
+  <!-- MEMBER SPOTLIGHT -->
+  <section class="section-spotlight">
+    <h2>Spotlight Members</h2>
+    <div class="directory-controls">
+      <button id="grid">Grid View</button>
+      <button id="list">List View</button>
+    </div>
+    <article class="membersGrid grid">
+      <h2 class="visually-hidden">Business Members Directory</h2>
+    </article>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-contact">
+        <strong>Uganda Golf Club</strong><br />
+        10 Kimathi Avenue, Kampala<br />
+        info@ugandagolfclub.org<br />
+        +256 555 2300
+      </div>
+
+      <div class="footer-social">
+        <a href="#" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube" /></a>
+        <a href="#" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter" /></a>
+        <a href="#" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn" /></a>
+      </div>
+
+      <div class="footer-dev">
+        <span>Designed by Nicholas Ssewanyana | WDD231 Project</span><br />
+        <span id="copyright"></span><br />
+        <span id="lastModified"></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/scriptshome.js"></script>
+  <script src="scripts/members.js"></script>
+</body>
+
+</html>

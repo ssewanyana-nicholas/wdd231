@@ -1,0 +1,313 @@
+/* RESET & BASE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #222;
+}
+
+/* TYPOGRAPHY */
+h1,
+h2,
+h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #1e1e61;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p,
+li,
+a,
+span {
+  font-size: 1rem;
+}
+
+a {
+  color: #1e1e61;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: #c5131c;
+  text-decoration: underline;
+}
+
+/* HEADER */
+header.site-header {
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav-menu a:hover {
+  opacity: 0.8;
+}
+
+/* LOGO */
+.logo img {
+  height: 100px;
+}
+
+/* CTA BUTTONS */
+.cta-button {
+  display: inline-block;
+  padding: 0.75em 1.4em;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button.primary {
+  background-color: #1f4229;
+  color: #fff;
+}
+
+.cta-button.primary:hover {
+  background-color: #155c38;
+}
+
+.cta-button.secondary {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.cta-button.secondary:hover {
+  background-color: #3e8e41;
+}
+
+/* HERO */
+.hero-bg-container {
+  position: relative;
+  background: url('../images/golfcourse.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-bg-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 25rem;
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.hero-content p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+.section-personal-approach {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 80px 60px;
+  background-color: #f9f9f9;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.approach-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 2;
+  gap: 20px;
+  min-width: 300px;
+}
+
+.approach-images img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.approach-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 420px;
+}
+
+.approach-text h2 {
+  font-size: 1rem;
+  color: #c5131c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.approach-text h3 {
+  font-size: 1.8rem;
+  margin: 0.4em 0;
+  font-weight: bold;
+  color: #1e1e61;
+}
+
+.approach-text p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.approach-text ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.approach-text li {
+  list-style-type: disc;
+  margin-bottom: 0.5rem;
+}
+
+.cta-button.secondary {
+  background: #c5131c;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cta-button.secondary:hover {
+  background: #1e1e61;
+}
+
+/* EVENTS SECTION */
+.enhanced-events-card {
+  background: linear-gradient(135deg, #fff7f0 60%, #ffe3e3);
+  border: 2px solid #c5131c33;
+  box-shadow: 0 6px 32px #c5131c22;
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  position: relative;
+}
+
+.events-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #c5131c22;
+  padding-bottom: 0.5rem;
+}
+
+.events-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 6px;
+  box-shadow: 0 2px 8px #c5131c22;
+}
+
+.events-list {
+  list-style: none;
+  margin: 0 0 1.5rem 0;
+}
+
+.events-list li {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+  color: #1e1e61;
+}
+
+.event-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #c5131c;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+}
+
+/* CHAT */
+.chat-widget {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.chat-widget a {
+  background: #4caf50;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 24px;
+  text-decoration: none;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #1e1e61;
+  color: #eee;
+  padding: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-social a img {
+  margin-right: 10px;
+  height: 24px;
+}
