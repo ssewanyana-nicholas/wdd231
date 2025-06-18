@@ -5,17 +5,16 @@ let members = [];
 let currentIndex = 0;
 let spotlightInterval = null;
 
-// Detect if we are on the directory page
-const isDirectory = window.location.pathname.includes("directory.html");
+// Always display 3 products at a time on index.html
+const isDirectory = window.location.pathname.includes("");
 
 // Fetch members and start appropriate display
 async function getMembers() {
     const response = await fetch(membersDataSource);
     if (response.ok) {
         members = await response.json();
-        console.table(members);
         if (isDirectory) {
-            displayAllMembers();
+            startSpotlight(); // Use spotlight logic for index.html
         } else {
             startSpotlight();
         }
@@ -24,101 +23,60 @@ async function getMembers() {
     }
 }
 
-// Display all members (for directory page)
-function displayAllMembers() {
-    articleMembersGrid.innerHTML = '<h2 class="visually-hidden">Business Members Directory</h2>';
-    members.forEach(member => {
-        let section = document.createElement('section');
-        let picture = document.createElement('picture');
-        let image = document.createElement('img');
-        let h3 = document.createElement('h3');
-        let p1 = document.createElement('p');
-        let p2 = document.createElement('p');
-        let p3 = document.createElement('p');
-        let p4 = document.createElement('p');
-        let url = document.createElement('a');
-
-        image.setAttribute('alt', member.businessname);
-        image.setAttribute('src', member.image || member.imageurl);
-        image.setAttribute('width', "150px");
-        picture.appendChild(image);
-        h3.textContent = member.businessname;
-        p1.textContent = "Address: " + member.address;
-        p2.textContent = "Phone Number: " + member.phone;
-        p3.textContent = "Membership Level: " + member.membershiplevel;
-        p4.textContent = "Other Information: " + member.otherinformation;
-
-        url.setAttribute('href', member.website);
-        url.setAttribute('title', "Website of " + member.businessname);
-        url.setAttribute('target', "_blank");
-        url.textContent = member.website;
-
-        section.appendChild(h3);
-        section.appendChild(picture);
-        section.appendChild(p1);
-        section.appendChild(p2);
-        section.appendChild(p3);
-        section.appendChild(p4);
-        section.appendChild(url);
-
-        articleMembersGrid.appendChild(section);
-    });
-}
-
-// Display three members at a time, cycling through the list (for index page)
-function displaySpotlightMembers() {
-    articleMembersGrid.innerHTML = '<h2 class="visually-hidden">Business Members Directory</h2>';
+// Display three products at a time, cycling through the list
+function displaySpotlightProducts() {
+    articleMembersGrid.innerHTML = '';
     for (let i = 0; i < 3; i++) {
-        const member = members[(currentIndex + i) % members.length];
+        const product = members[(currentIndex + i) % members.length];
         let section = document.createElement('section');
-        let picture = document.createElement('picture');
+        section.className = 'product-card';
+
         let image = document.createElement('img');
+        image.setAttribute('alt', product.name);
+        image.setAttribute('src', product.image);
+        image.setAttribute('width', "180");
+
         let h3 = document.createElement('h3');
-        let p1 = document.createElement('p');
-        let p2 = document.createElement('p');
-        let p3 = document.createElement('p');
-        let p4 = document.createElement('p');
-        let url = document.createElement('a');
+        h3.textContent = product.name;
 
-        image.setAttribute('alt', member.businessname);
-        image.setAttribute('src', member.image || member.imageurl);
-        image.setAttribute('width', "150px");
-        picture.appendChild(image);
-        h3.textContent = member.businessname;
-        p1.textContent = "Address: " + member.address;
-        p2.textContent = "Phone Number: " + member.phone;
-        p3.textContent = "Membership Level: " + member.membershiplevel;
-        p4.textContent = "Other Information: " + member.otherinformation;
+        let desc = document.createElement('p');
+        desc.textContent = product.description;
 
-        url.setAttribute('href', member.website);
-        url.setAttribute('title', "Website of " + member.businessname);
-        url.setAttribute('target', "_blank");
-        url.textContent = member.website;
+        let category = document.createElement('p');
+        category.innerHTML = `<strong>Category:</strong> ${product.category}`;
+
+        let price = document.createElement('p');
+        price.innerHTML = `<strong>Price:</strong> $${product.price.toFixed(2)}`;
 
         section.appendChild(h3);
-        section.appendChild(picture);
-        section.appendChild(p1);
-        section.appendChild(p2);
-        section.appendChild(p3);
-        section.appendChild(p4);
-        section.appendChild(url);
+        section.appendChild(image);
+        section.appendChild(desc);
+        section.appendChild(category);
+        section.appendChild(price);
+
+        if (product.discount && product.discount > 0) {
+            let discount = document.createElement('p');
+            discount.className = 'discount';
+            discount.textContent = `Discount: ${product.discount}% off`;
+            section.appendChild(discount);
+        }
 
         articleMembersGrid.appendChild(section);
     }
     currentIndex = (currentIndex + 3) % members.length;
 }
 
-// Start the spotlight interval (for index page)
+// Start the spotlight interval (for all pages)
 function startSpotlight() {
-    displaySpotlightMembers();
+    displaySpotlightProducts();
     if (spotlightInterval) clearInterval(spotlightInterval);
-    spotlightInterval = setInterval(displaySpotlightMembers, 5000);
+    spotlightInterval = setInterval(displaySpotlightProducts, 5000);
 }
 
-// Grid/List toggle
+// Grid/List toggle (optional, will only affect layout, not count)
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
-const display = document.querySelector("article");
+const display = document.querySelector("article.membersGrid");
 
 if (gridbutton && listbutton && display) {
     gridbutton.addEventListener("click", () => {
@@ -126,12 +84,10 @@ if (gridbutton && listbutton && display) {
         display.classList.remove("list");
     });
 
-    listbutton.addEventListener("click", showList);
-
-    function showList() {
+    listbutton.addEventListener("click", () => {
         display.classList.add("list");
         display.classList.remove("grid");
-    }
+    });
 }
 
 getMembers();
