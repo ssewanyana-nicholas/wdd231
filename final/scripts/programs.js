@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
             image.className = "programs-image";
             // Ensure images are in the correct folder: images/programs/
             let imgSrc = item.images ? `${item.images}` : "images/programs/default.jpg";
-            image.innerHTML = `<img src="${imgSrc}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:10px 10px 0 0;min-height:150px;max-height:180px;">`;
+            image.innerHTML = `<img src="${imgSrc}" alt="${item.name}">`;
+            image.loading = "lazy";
             card.appendChild(image);
 
             // Details

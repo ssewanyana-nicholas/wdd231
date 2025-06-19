@@ -35,6 +35,7 @@ function displaySpotlightProducts() {
         image.setAttribute('alt', product.name);
         image.setAttribute('src', product.image);
         image.setAttribute('width', "180");
+        
 
         let h3 = document.createElement('h3');
         h3.textContent = product.name;

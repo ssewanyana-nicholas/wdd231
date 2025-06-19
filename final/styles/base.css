@@ -62,7 +62,7 @@ a:focus {
 }
 
 /* HEADER */
-header.site-header {
+header {
   color: #fff;
   padding: 1rem 2rem;
   display: flex;
@@ -118,9 +118,9 @@ header.site-header {
 }
 
 /* HERO */
-.hero-bg-container {
+.home-hero-bg {
   position: relative;
-  background: url('../images/golfcourse.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(150, 30, 56, 0.55), rgba(148, 150, 30, 0.55)), url('../images/golfcourse.jpg') center/cover no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -715,6 +715,7 @@ header.site-header {
   font-size: 1.1rem;
   color: #082509;
 }
+
 
 
 /* Unique CTA for programs page */

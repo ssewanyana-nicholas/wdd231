@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Discover Uganda Golf Club: premier golfing, events, and membership in Kampala.">
   <meta name="author" content="Nicholas Ssewanyana">
-  <title>Uganda Golf Club Programs</title>
+  <title>Uganda Golf Club</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
   <!-- Fonts & Styles -->
@@ -17,7 +17,15 @@
   <link rel="stylesheet" href="styles/normalise.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/large.css">
+
+  <!-- Social Meta Tags -->
+  <meta property="og:title" content="Uganda Golf Club - Kampala's Premier Golf Destination">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ssewanyana-nicholas.github.io/wdd231/final/images/golfgame.webp">
+  <meta property="og:url" content="https://ssewanyana-nicholas.github.io/wdd231/final/index.html">
+  <meta property="og:description" content="Book tee times, join tournaments, and explore Uganda Golf Club.">
 </head>
+
 
 <body>
   <!-- HERO SECTION -->
@@ -27,8 +35,7 @@
         <img src="images/golflogo.png" alt="Uganda Golf Club Logo">
         <span>Uganda Golf Club</span>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false"
-        aria-controls="main-nav">
+      <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -36,7 +43,7 @@
       <nav class="nav-menu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a  class="active"  href="programs.html">Our programs</a></li>
+          <li><a class="active" href="programs.html">Our programs</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -48,20 +55,22 @@
     </section>
   </div>
 
-  <!-- PROGRAM TABS -->
-  <div class="programs-tabs" id="programs-tabs">
-    <!-- Tabs will be injected by JS -->
-  </div>
-
-  <!-- PROGRAM CONTENT -->
-  <div class="programs-content" id="programs-content">
-    <!-- Sections will be injected by JS -->
-  </div>
+  <main>
+    <h1>OUR PROGRAMS</h1>
+    <!-- PROGRAM TABS -->
+    <div class="programs-tabs" id="programs-tabs">
+      <!-- Tabs will be injected by JS -->
+    </div>
+    <!-- PROGRAM CONTENT -->
+    <div class="programs-content" id="programs-content">
+      <!-- Sections will be injected by JS -->
+    </div>
+  </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-content">
-      <div class="footer-contact">
+      <div>
         <strong>Uganda Golf Club</strong><br>
         10 Kimathi Avenue, Kampala<br>
         info@ugandagolfclub.org<br>
@@ -73,7 +82,7 @@
         <a href="https://www.linkedin.com/in/nicholas-ssewanyana" aria-label="LinkedIn"><img src="images/linkedin.svg"
             alt="LinkedIn"></a>
       </div>
-      <div class="footer-dev">
+      <div>
         <span>Designed by Nicholas Ssewanyana | WDD231 Project</span><br>
         <span id="copyright"></span><br>
         <span id="lastModified"></span>
