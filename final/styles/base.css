@@ -113,6 +113,11 @@ header {
   color: #fff;
 }
 
+.active {
+  background-color: #1e1e61;
+  color: #fff;
+}
+
 .cta-button.secondary:hover {
   background-color: #3e8e41;
 }
