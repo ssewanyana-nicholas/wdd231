@@ -9,7 +9,7 @@
 
 html,
 body {
-  width: 100%;
+  width: 100%;  
   max-width: 100%;
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
@@ -113,6 +113,19 @@ header {
   color: #fff;
 }
 
+.open-modal-btn {
+  background-color: #1e1e61;
+  color: #fff;
+  padding: 0.75em 1.4em;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.open-modal-btn:hover {
+  background-color: #c5131c;
+}
 .active {
   background-color: #1e1e61;
   color: #fff;
