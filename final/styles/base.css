@@ -484,19 +484,6 @@ header {
   font-weight: 600;
 }
 
-/* Responsive adjustments for grid */
-@media (max-width: 700px) {
-  .product-showcase.grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-
-  .product-card img {
-    height: 180px;
-    object-fit: cover;
-  }
-}
-
 /* FOOTER */
 .site-footer {
   background: #1e1e61;
@@ -948,40 +935,6 @@ header {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Responsive nav */
-@media (max-width: 900px) {
-  .nav-menu ul {
-    position: fixed;
-    top: 0;
-    right: -100vw;
-    width: 70vw;
-    max-width: 320px;
-    height: 100vh;
-    background: #990303;
-    box-shadow: -2px 0 16px #1e1e6133;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 5rem 2rem 2rem 2rem;
-    gap: 2rem;
-    transition: right 0.4s cubic-bezier(.77, 0, .18, 1);
-    z-index: 1000;
-  }
-
-  .nav-menu ul.open {
-    right: 0;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-menu {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-
 .membersGrid.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1053,67 +1006,6 @@ header {
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-  .modal-content {
-    padding: 1rem;
-    border-radius: 10px;
-  }
-
-  .close-modal-btn {
-    font-size: 1.4rem;
-    top: 0.5rem;
-    right: 0.5rem;
-  }
-
-  .pro-events-card {
-    padding: 1.5rem 1rem;
-  }
-
-  .pro-events-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .events-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .pro-events-list li {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    gap: 0.6rem;
-  }
-
-  .event-date {
-    width: 48px;
-    height: 48px;
-    font-size: 0.9rem;
-  }
-
-  .event-day {
-    font-size: 1.2rem;
-  }
-
-  .event-month {
-    font-size: 0.9rem;
-  }
-
-  .event-title {
-    font-size: 1rem;
-  }
-
-  .event-time {
-    font-size: 0.95rem;
-  }
-
-  .pro-events-link {
-    font-size: 1rem;
-    padding: 0.6em 1.2em;
-  }
-}
 
 .modal-button-center {
   display: flex;
